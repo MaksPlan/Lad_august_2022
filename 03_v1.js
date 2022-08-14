@@ -17,7 +17,10 @@ function letPlayGame() {
     for (let i = 0; i < 10; i++) {
         let pickedNumber = +readlineSync.question(`Put a  number:  ${secret.length} digits`);
         const picked = pickedNumber.toString().split('');
-        if (!(typeof pickedNumber === 'number') || !(secret.length === picked.length) ) return console.log('Некорректное число')
+        if (!(typeof pickedNumber === 'number') || !(secret.length === picked.length) ) {
+            
+            console.log('Некорректное число')
+        return letPlayGame()}
         if (pickedNumber - secretNumber === 0) {
             return console.log('Вы угадали, поздравляю')
         } 
