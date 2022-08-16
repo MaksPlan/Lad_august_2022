@@ -81,7 +81,7 @@ function coolDownCounter(arr) {
        arr.forEach((el) => {el === 0 ? el : el-- ;
      array.push(el)});
      arr = array;
-     console.log(arr)
+    //  console.log(arr)
      return arr;
  } 
 
