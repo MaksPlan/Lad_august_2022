@@ -28,6 +28,7 @@ function translateDaysToEng(string) {
 let changeDay = string;
     for (let i = 0; i < daysInRus.length; i++) {
     changeDay = changeDay.replace(`${daysInRus[i]}`, `${daysInEng[i]}`);
+    if (changeDay.includes(daysInRus[i]))   changeDay = changeDay.replace(`${daysInRus[i]}`, `${daysInEng[i]}`);
   
     }
     return changeDay;
